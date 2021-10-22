@@ -27,7 +27,7 @@ TEST_CASE("reports average, minimum and maximum") {
     REQUIRE((computedStats.average != computedStats.average) ? 1 : 0)
 }
 
-/*TEST_CASE("raises alerts when max is greater than threshold") {
+TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
     alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
@@ -42,5 +42,5 @@ TEST_CASE("reports average, minimum and maximum") {
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
     REQUIRE(emailAlertCallCount == 1);
-    REQUIRE(ledAlertCallCount == 1);*/
-}
+    REQUIRE(ledAlertCallCount == 1);
+}*/
