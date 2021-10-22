@@ -11,6 +11,7 @@
 
     struct Stats compute_statistics(const float* numberset, int setlength)
     {
+        struct Stats s;
         float sum = 0;
         int i;
         
@@ -40,6 +41,8 @@
         s.average = sum/setlength ;
         s.min = mn;
         s.max = mx;
+        
+        return s;
     }
 
 int emailAlertCallCount = 0;
