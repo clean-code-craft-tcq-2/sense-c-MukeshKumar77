@@ -48,4 +48,13 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     REQUIRE(ledAlerterFunctionCall == 1);
     REQUIRE(emailAlertCallCount == 1);
     REQUIRE(ledAlertCallCount == 1);
+    
+    // negative test case
+    const float maxThreshold = 111.2;
+    check_and_alert(maxThreshold, alerters, computedStats);
+    
+    REQUIRE(emailAlertFunctionCall == 0);
+    REQUIRE(ledAlerterFunctionCall == 0);
+    REQUIRE(emailAlertCallCount == 0);
+    REQUIRE(ledAlertCallCount == 0);
 }
