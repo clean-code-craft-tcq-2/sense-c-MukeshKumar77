@@ -30,8 +30,15 @@
         }
         
         s.average = sum/setlength ;
+        //if average is NaN
+        if(s.average != s.average)
+        {
+            s.min = s.max = s.average;
+        }
+        else{
         s.min = mn;
         s.max = mx;
+        }
         
         return s;
     }
