@@ -5,8 +5,8 @@ int emailAlertCallCount;
 int ledAlertCallCount;
 
 //counter to check if both emailAlerter, ledAlerter were called
-int emailAlertFunctionCall = 0;
-int ledAlerterCountFunctionCall = 0;
+int emailAlertFunctionCall;
+int ledAlerterFunctionCall;
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
@@ -17,7 +17,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
       (*alerters[1])();
        
       emailAlertFunctionCall++;
-      ledAlerterCountFunctionCall++;
+      ledAlerterFunctionCall++;
   }
 }
 
