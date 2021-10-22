@@ -41,7 +41,6 @@
         s.min = mn;
         s.max = mx;
     }
-}
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
