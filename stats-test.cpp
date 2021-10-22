@@ -44,17 +44,8 @@ TEST_CASE("raises alerts when max is greater than threshold") {
 
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
-    REQUIRE(emailAlertFunctionCall == 1);
-    REQUIRE(ledAlerterFunctionCall == 1);
     REQUIRE(emailAlertCallCount == 1);
     REQUIRE(ledAlertCallCount == 1);
-    
-    // negative test case
-    const float maxThreshold = 111.2;
-    check_and_alert(maxThreshold, alerters, computedStats);
-    
-    REQUIRE(emailAlertFunctionCall == 0);
-    REQUIRE(ledAlerterFunctionCall == 0);
-    REQUIRE(emailAlertCallCount == 0);
-    REQUIRE(ledAlertCallCount == 0);
+    REQUIRE(emailAlertFunctionCall == 1);
+    REQUIRE(ledAlerterFunctionCall == 1);
 }
